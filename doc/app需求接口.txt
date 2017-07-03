@@ -1,0 +1,82 @@
+App  日期 yyyy-mm-dd
+排班
+	/workSchedule/createWrokSchedule
+	参数
+		entityId	门店ID   int
+		workDate 	工作日期 string
+		isWork		是否工作 string
+		startDate   排班起始日期 string
+		endDate		排班截止日期 string
+排班信息
+   	/workSchedule/workScheduleInfo	
+   参数
+   	startDate   排班起始日期 string 
+   	endDate	         排班截止日期 string
+ 返回 json格式
+ 	workDay 日期
+ 	isWork  上班/休息
+ 	shopName 门店名称
+ 	entityId 门店id  (实际为组织架构中的id)
+ 
+ 		
+ 		
+ 		
+ 		
+巡店
+打卡 	/shopInspection/pushCard
+参数
+	longitude 		经度 string
+	latitude		纬度 stirng 
+	inspectionType  打卡类型  1:进店 0:离店
+	entityId 门店id  (实际为组织架构中的id)
+	shopName 门店名称
+	
+	移除进店打卡 /shopInspection/removePushCard
+参数
+	entityId 门店id  (实际为组织架构中的id)
+		
+获取附近门店	 /shopInspection/getShops
+参数
+	longitude 		经度 string
+	latitude		纬度 stirng 
+返回
+	entityId 门店id  (实际为组织架构中的id)
+	shopName 门店名称		
+	
+	
+	获取督导巡店详细数据 /api/shopInspection/shopInspectionInfo
+	参数 
+		startDate	yyyy-mm-dd
+		endDate		yyyy-mm-dd
+	返回 参数类似下面  
+		rows : {
+			inShopTime":"2017-06-19 18:42:10",
+			"outShopTime":"2017-06-19 18:49:56",
+			"workDay":"2017-06-19",
+			"cityName":"深圳",
+			"entityId":11,
+			"provinceName":"广东",
+			"provinceNo":"STA0101",
+			"address":"4324",
+			"nationName":"中国",
+			"userNo":"test1",
+			"shopName":"金立专卖店1",
+			"cityNo":"CIT010101",
+			"userName":"test1",
+			"nationNo":" CNTY01"
+		}
+		
+		
+巡店次数  /shopInspection/shopInspectionCount	
+   参数
+   	startDate   排班起始日期 string
+   	endDate	         排班截止日期 string	
+返回
+	count  次数	
+	
+	判断是否需要打离店卡   /api/shopInspection/needPushCard
+	返回 
+		0  需要打离店卡
+		1 不需打离店卡
+	
+	

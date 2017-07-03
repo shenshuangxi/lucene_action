@@ -1,0 +1,7 @@
+1,获取时间   	/interfaces/time/systime 返回 yyyy-MM-dd hh:mm:ss 格式的时间
+2,加密key   key定义为 gscpwd#@  将key+yyyy-MM-dd hh:mm 进行md5 得到秘钥
+3,将加密后的秘钥 作为参数 跟请求参数一起获取数据
+
+接口类型
+http://gsc.go.gionee.com/interfaces/imeis/sell?sign=738B95793944F5B42570A3A525365DC1&startDate=2017-05-21&endDate=2017-05-31
+http://gsc.go.gionee.com/interfaces/time/systime

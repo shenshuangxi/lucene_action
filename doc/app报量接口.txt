@@ -1,0 +1,38 @@
+apk接口：
+	api/sell/getImei  //获取串码信息 机型颜色
+		参数：imei
+	api/shop/userShop //获取当前用户可用门店
+		参数：name(门店名称,搜索使用)
+	api/sell/sell //报量  
+		参数：imei,entityId,goodsName,goodsColor  顾客信息(custmerName,telephone,ageGrades[字符串],sex[1,0])
+		
+	获取用户信息
+		api/user/getCurrentUserInfo
+		返回参数中有role
+		
+	获取权限：
+		api/role/loadResources  
+			参数：roleId
+	
+	
+	
+查询：
+	api/android/daySale 当日汇总
+		request：startDate,endDate		
+		response:goodsName，sellBy，shopName，sellNum，sellById，entityId
+		
+		
+		
+	api/android/daySaleDtl 
+		request：startDate,endDate,entityId,sellById,goodsName
+		response:imei，goodsName，sellBy，shopName，isNormal，sellDate(暂未加)
+	
+	api/android/saleLog（详情使用上面的daySaleDtl） 
+		request：startDate,endDate		
+		response:goodsName，sellBy，shopName，sellNum，sellById，entityId，errorNum
+
+
+用户：
+    修改密码
+
+    切换语言

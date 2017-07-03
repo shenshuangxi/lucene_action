@@ -1,0 +1,18 @@
+/api/android/errorSaleDtl   
+	返回
+		sellDate 		报量时间
+	    imei  			报量IMEI
+	    goodsName 		报量机型
+	    sellBy			报量账号
+	    shopName  		报量门店名称
+		exception		异常原因
+		auditState		销量状态
+	
+/api/android/daySaleDtl
+	返回
+		 sellDate		报量时间
+         imei			报量IMEI
+         goodsName		报量机型
+         sellBy			报量账号
+         status			销量状态
+         shopName 		报量门店名称
